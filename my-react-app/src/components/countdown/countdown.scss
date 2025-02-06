@@ -1,0 +1,25 @@
+.countDownContainer {
+  width: 280px;
+  height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  opacity: 0.5;
+  &__countdown {
+    font-size: 50px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff5733, #ffbd33, #75ff33);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Arial', sans-serif;
+  }
+  &__go {
+    font-size: 250px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff5733, #ffbd33, #75ff33);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Arial', sans-serif;
+  }
+}
