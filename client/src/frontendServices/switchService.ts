@@ -1,16 +1,15 @@
 import {setCountOn, setRandomOn, setTimeOn} from "../features/switchSlice.ts";
-import {useDispatch} from "react-redux";
-
-const dispatch = useDispatch();
+import {AppDispatch} from "../redux/store/store.ts";
 
 class SwitchService {
- static timeOn () {
+
+ static timeOn (dispatch: AppDispatch) {
      dispatch(setTimeOn())
  }
- static randomOn () {
+ static randomOn (dispatch: AppDispatch) {
      dispatch(setRandomOn())
  }
- static countOn () {
+ static countOn (dispatch: AppDispatch) {
      dispatch(setCountOn())
  }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import './randomNumber.scss';
 import RandomNumberService from "../../frontendServices/randomNumberService.ts";
+import './randomNumber.scss';
 
 const RandomNumber = () => {
     return (

@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import './time.scss'
 
 const Time = () => {
-
     const [time] = useState(new Date().toLocaleTimeString())
 
     return (

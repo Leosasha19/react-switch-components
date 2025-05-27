@@ -3,8 +3,12 @@ import './countdown.scss'
 
 
 const Countdown = () => {
-
     const [count, setCount] = useState(20)
+
+    useEffect(() => {
+        const timerId = setTimeout(() => {counter()}, 1000)
+        return () => clearTimeout(timerId)
+    },[count])
 
     const counter = () => {
         if (count > 0) {
@@ -13,11 +17,6 @@ const Countdown = () => {
             setCount("ПОЕХАЛИ!")
         }
     }
-
-    useEffect(() => {
-        const timerId = setTimeout(() => {counter()}, 1000)
-        return () => clearTimeout(timerId)
-    },[count])
 
     return (
         <div className={"countDownContainer"}>
