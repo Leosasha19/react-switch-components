@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import './countdown.scss';
 
 const Countdown = () => {
-  const [count, setCount] = useState(20);
+  const [letsGo, setLetsGo] = useState<string>('');
+  const [count, setCount] = useState<number>(20);
 
   useEffect(() => {
     const timerId = setTimeout(() => {
@@ -15,7 +16,7 @@ const Countdown = () => {
     if (count > 0) {
       setCount(count - 1);
     } else {
-      setCount('ПОЕХАЛИ!');
+      setLetsGo('ПОЕХАЛИ!');
     }
   };
 
@@ -23,12 +24,12 @@ const Countdown = () => {
     <div className={'countDownContainer'}>
       <div
         className={
-          count === 'ПОЕХАЛИ!'
+          letsGo === 'ПОЕХАЛИ!'
             ? 'countDownContainer__countdown'
             : 'countDownContainer__go'
         }
       >
-        {count}
+        {letsGo === 'ПОЕХАЛИ!' ? letsGo : count}
       </div>
     </div>
   );
